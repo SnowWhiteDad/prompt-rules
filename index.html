@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coder - Prompt Rules Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-shield-alt"></i> Vibe Coder Rules Generator</h1>
+                <p>Generate secure prompt rules for your coding tools based on OWASP LLM Top threats and Wiz baseline rules</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="tool-selection">
+                <h2>Select Your Coding Tool</h2>
+                <div class="tool-grid">
+                    <div class="tool-card" data-tool="cursor">
+                        <i class="fas fa-mouse-pointer"></i>
+                        <h3>Cursor</h3>
+                        <p>AI-powered code editor</p>
+                    </div>
+                    <div class="tool-card" data-tool="claude">
+                        <i class="fas fa-robot"></i>
+                        <h3>Claude Code</h3>
+                        <p>Anthropic's coding assistant</p>
+                    </div>
+                    <div class="tool-card" data-tool="github-copilot">
+                        <i class="fas fa-code-branch"></i>
+                        <h3>GitHub Copilot</h3>
+                        <p>GitHub's AI pair programmer</p>
+                    </div>
+                    <div class="tool-card" data-tool="vscode">
+                        <i class="fas fa-code"></i>
+                        <h3>VS Code Extensions</h3>
+                        <p>Visual Studio Code AI tools</p>
+                    </div>
+                    <div class="tool-card" data-tool="jetbrains">
+                        <i class="fas fa-jet-fighter"></i>
+                        <h3>JetBrains AI</h3>
+                        <p>JetBrains IDE AI assistants</p>
+                    </div>
+                    <div class="tool-card" data-tool="cline">
+                        <i class="fas fa-terminal"></i>
+                        <h3>Cline</h3>
+                        <p>AI-powered command line assistant</p>
+                    </div>
+                    <div class="tool-card" data-tool="windsurf">
+                        <i class="fas fa-wind"></i>
+                        <h3>Windsurf</h3>
+                        <p>AI coding assistant</p>
+                    </div>
+                    <div class="tool-card" data-tool="codex">
+                        <i class="fas fa-brain"></i>
+                        <h3>Codex</h3>
+                        <p>OpenAI's code generation model</p>
+                    </div>
+                    <div class="tool-card" data-tool="aider">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>Aider</h3>
+                        <p>AI-powered code editing assistant</p>
+                    </div>
+                    <div class="tool-card" data-tool="custom">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Custom Tool</h3>
+                        <p>Generic rules for any AI tool</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="rules-generator" id="rulesGenerator" style="display: none;">
+                <div class="generator-header">
+                    <h2 id="selectedToolTitle">Generate Rules for <span id="toolName"></span></h2>
+                    <button class="btn-secondary" id="backToTools">
+                        <i class="fas fa-arrow-left"></i> Back to Tools
+                    </button>
+                </div>
+
+                <div class="threats-section">
+                    <h3>OWASP LLM Top Threats to Address</h3>
+                    <div class="threats-grid" id="threatsGrid">
+                        <!-- Threats will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="customization-section">
+                    <h3>Customize Your Rules</h3>
+                    <div class="customization-options">
+                        <div class="option-group">
+                            <label for="projectType">Project Type:</label>
+                            <select id="projectType">
+                                <option value="web">Web Application</option>
+                                <option value="mobile">Mobile Application</option>
+                                <option value="api">API/Backend</option>
+                                <option value="desktop">Desktop Application</option>
+                                <option value="library">Library/Framework</option>
+                                <option value="general">General Purpose</option>
+                            </select>
+                        </div>
+                        <div class="option-group">
+                            <label for="securityLevel">Security Level:</label>
+                            <select id="securityLevel">
+                                <option value="basic">Basic</option>
+                                <option value="standard" selected>Standard</option>
+                                <option value="strict">Strict</option>
+                                <option value="paranoid">Paranoid</option>
+                            </select>
+                        </div>
+                        <div class="option-group">
+                            <label for="language">Primary Language/Framework:</label>
+                            <select id="language">
+                                <option value="javascript">JavaScript/TypeScript</option>
+                                <option value="javascript-react">JavaScript React</option>
+                                <option value="javascript-nodejs">JavaScript Node.js</option>
+                                <option value="python">Python</option>
+                                <option value="python-flask">Python Flask</option>
+                                <option value="python-django">Python Django</option>
+                                <option value="java">Java</option>
+                                <option value="java-spring">Java Spring</option>
+                                <option value="csharp">C#</option>
+                                <option value="dotnet-aspnetcore">.NET ASP.NET Core</option>
+                                <option value="c">C Programming</option>
+                                <option value="go">Go</option>
+                                <option value="rust">Rust</option>
+                                <option value="php">PHP</option>
+                                <option value="ruby">Ruby</option>
+                                <option value="swift">Swift</option>
+                                <option value="kotlin">Kotlin</option>
+                                <option value="general">General</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="generate-section">
+                    <button class="btn-primary" id="generateRules">
+                        <i class="fas fa-magic"></i> Generate Security Rules
+                    </button>
+                </div>
+
+                <div class="rules-output" id="rulesOutput" style="display: none;">
+                    <div class="output-header">
+                        <h3>Generated Security Rules</h3>
+                        <div class="output-actions">
+                            <button class="btn-secondary" id="copyRules">
+                                <i class="fas fa-copy"></i> Copy
+                            </button>
+                            <button class="btn-primary" id="downloadRules">
+                                <i class="fas fa-download"></i> Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="rules-content">
+                        <div class="rules-preview" id="rulesPreview">
+                            <!-- Generated rules will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Vibe Coder Rules Generator. Based on OWASP LLM Top 10 threats and Wiz Secure Rules Files.</p>
+        </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html> 

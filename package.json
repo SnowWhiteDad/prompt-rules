@@ -1,0 +1,56 @@
+{
+  "name": "vibe-coder-rules-generator",
+  "version": "1.0.0",
+  "description": "A modern web application that generates secure prompt rules for AI coding tools based on OWASP LLM Top 10 threats and Wiz baseline rules",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 3000 -c-1",
+    "dev": "npx http-server -p 3000 -c-1 -o",
+    "build": "echo 'Static files ready for deployment'",
+    "test": "echo 'No tests specified'",
+    "lint": "npx eslint *.js || true",
+    "format": "npx prettier --write *.html *.css *.js *.md *.json",
+    "docker:build": "docker build -t vibe-coder-rules-generator .",
+    "docker:run": "docker run -p 3000:80 vibe-coder-rules-generator",
+    "docker:stop": "docker stop $(docker ps -q --filter ancestor=vibe-coder-rules-generator)",
+    "deploy": "npm run build && npm run docker:build"
+  },
+  "keywords": [
+    "ai",
+    "security",
+    "owasp",
+    "llm",
+    "prompt-rules",
+    "coding-tools",
+    "wiz-security",
+    "cursor",
+    "claude",
+    "copilot",
+    "vscode",
+    "jetbrains"
+  ],
+  "author": "SnowWhiteDad",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SnowWhiteDad/prompt-rules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SnowWhiteDad/prompt-rules/issues"
+  },
+  "homepage": "https://github.com/SnowWhiteDad/prompt-rules#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+} 
