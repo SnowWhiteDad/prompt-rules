@@ -5,6 +5,7 @@ A modern web application that generates secure prompt rules for AI coding tools 
 ## 🚀 Features
 
 ### Core Functionality
+
 - **OWASP LLM Top 10 Integration**: Generates rules based on the latest OWASP LLM security threats
 - **Wiz Baseline Rules Integration**: Incorporates industry-tested security rules from Wiz Security
 - **Multi-Tool Support**: Supports popular AI coding tools including:
@@ -20,6 +21,7 @@ A modern web application that generates secure prompt rules for AI coding tools 
   - Custom AI tools
 
 ### Security Levels
+
 - **Basic**: Essential security measures for development
 - **Standard**: Comprehensive security for most projects
 - **Strict**: Enhanced security for sensitive applications
