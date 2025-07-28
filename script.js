@@ -1025,6 +1025,7 @@ function generateSetupInstructions(toolConfig, securityLevel) {
     instructions += `Generated on: ${new Date().toISOString()}\n`;
     instructions += `Security Level: ${SECURITY_LEVELS[securityLevel].name}\n`;
     instructions += `Tool: ${toolConfig.name}\n`;
+    instructions += `By S Shittu - 2025 <a href="https://github.com/SnowWhiteDad/prompt-rules">GitHub, </a><a href="https://www.linkedin.com/in/shittu/">LinkedIn</a>\n`;
     
     return instructions;
 }
