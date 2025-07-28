@@ -76,7 +76,7 @@ Available rules are based on Selected tool, Project type and language combinatio
 
 ## 📁 File Structure
 
-```
+```bash
 vibe-coder/
 ├── index.html          # Main application interface
 ├── styles.css          # Modern, responsive styling
@@ -87,10 +87,12 @@ vibe-coder/
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Modern web browser (Chrome, Firefox, Safari, Edge)
 - No additional dependencies required
 
 ### Installation
+
 1. Clone or download the project files
 2. Open `index.html` in your web browser
 3. Start generating security rules!
@@ -98,7 +100,9 @@ vibe-coder/
 ### Usage
 
 #### Step 1: Select Your AI Tool
+
 Choose from the available AI coding tools:
+
 - **Cursor**: AI-powered code editor
 - **Claude Code**: Anthropic's coding assistant
 - **GitHub Copilot**: GitHub's AI pair programmer
@@ -111,11 +115,13 @@ Choose from the available AI coding tools:
 - **Custom Tool**: Generic rules for any AI tool
 
 #### Step 2: Configure Your Project
+
 - **Project Type**: Select the type of application you're building
 - **Security Level**: Choose the appropriate security strictness
 - **Language**: Select your primary programming language
 
 #### Step 3: Generate and Download
+
 - Click "Generate Security Rules" to create your configuration
 - Review the generated rules in the preview
 - Copy to clipboard or download the native configuration file
@@ -126,25 +132,30 @@ Choose from the available AI coding tools:
 Each generated configuration file includes:
 
 ### Header Information
+
 - Tool-specific configuration header
 - Project metadata (type, security level, language)
 - Generation timestamp
 
 ### OWASP Threat Mitigation
+
 - Specific rules for each applicable OWASP threat
 - Language-specific security patterns
 - Recommended security libraries and tools
 
 ### Project-Specific Rules
+
 - Security best practices for the selected project type
 - Framework and platform-specific recommendations
 
 ### Language-Specific Rules
+
 - Dangerous patterns to avoid
 - Recommended security libraries
 - Language-specific best practices
 
 ### Setup Instructions
+
 - Tool-specific configuration steps
 - File placement instructions
 - Additional security recommendations
@@ -153,36 +164,43 @@ Each generated configuration file includes:
 ## 🔧 Tool-Specific Configurations
 
 ### Cursor AI
+
 - **File Extension**: `.cursorrules`
 - **Location**: Project root directory
-- **Features**: AI assistant security rules and behavior controls
+- **Features**: AI assistant security rules and behaviour controls
 
 ### Claude Code
+
 - **File Extension**: `CLAUDE.md`
 - **Location**: Project configuration or system prompts
 - **Features**: Claude-specific security guidelines based on Wiz baseline rules
 
 ### GitHub Copilot
+
 - **File Extension**: `Copilot Instructions`
 - **Location**: Project settings
-- **Features**: Copilot behavior and security controls based on Wiz baseline rules
+- **Features**: Copilot behaviour and security controls based on Wiz baseline rules
 
 ### VS Code Extensions
+
 - **File Extension**: `.vscode-rules`
 - **Location**: Workspace settings
 - **Features**: AI extension security configurations
 
 ### JetBrains AI
+
 - **File Extension**: `.jetbrains-rules`
 - **Location**: IDE configuration
 - **Features**: JetBrains AI assistant security rules
 
 ### Custom Tools
+
 - **File Extension**: `.ai-rules`
 - **Location**: Tool-specific configuration
 - **Features**: Generic AI tool security guidelines
 
 ### Additional Tools (Wiz Supported)
+
 - **Cline**: `Cline Rules` - AI-powered command line assistant
 - **Windsurf**: `Windsurf Rules` - AI coding assistant
 - **Codex**: `AGENTS.md` - OpenAI's code generation model
@@ -191,12 +209,14 @@ Each generated configuration file includes:
 ## 🎨 Design Features
 
 ### Modern UI/UX
+
 - **Responsive Design**: Works on desktop, tablet, and mobile
 - **Smooth Animations**: Engaging user interactions
 - **Accessibility**: Keyboard navigation and screen reader support
 - **Dark/Light Theme**: Automatic theme detection
 
 ### User Experience
+
 - **Intuitive Interface**: Easy-to-follow workflow
 - **Real-time Preview**: See generated rules before downloading
 - **Copy & Download**: Multiple ways to save your configuration
@@ -205,16 +225,19 @@ Each generated configuration file includes:
 ## 🔒 Security Features
 
 ### Input Validation
+
 - Client-side validation for all user inputs
 - Sanitization of generated content
 - XSS protection in the interface
 
 ### Data Privacy
+
 - No data sent to external servers
 - All processing happens locally
 - No user data collection or storage
 
 ### Secure Downloads
+
 - Safe file generation and download
 - Proper MIME type handling
 - Secure blob creation and cleanup
@@ -229,12 +252,14 @@ Each generated configuration file includes:
 ## 📚 Resources
 
 ### OWASP Resources
+
 - [OWASP LLM Top 10](https://owasp.org/www-project-ai-security-and-privacy-guide/)
 - [Wiz Secure Rules Files](https://github.com/wiz-sec-public/secure-rules-files)
 - [AI Security Best Practices](https://ai-security.org/)
 - [Secure AI Development](https://secure-ai.dev/)
 
 ### Tool Documentation
+
 - [Cursor Documentation](https://cursor.sh/docs)
 - [Claude Code Documentation](https://docs.anthropic.com/)
 - [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
@@ -246,6 +271,7 @@ Each generated configuration file includes:
 Contributions are welcome! Please feel free to submit issues, feature requests, or pull requests.
 
 ### Development Setup
+
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
@@ -253,6 +279,7 @@ Contributions are welcome! Please feel free to submit issues, feature requests, 
 5. Submit a pull request
 
 ### Areas for Contribution
+
 - Additional AI tool support
 - New security threat patterns
 - Language-specific security rules
@@ -280,4 +307,4 @@ If you encounter any issues or have questions:
 
 ---
 
-**Note**: This tool generates security rules based on best practices and OWASP guidelines. Always review and customize the generated rules for your specific use case and security requirements. 
+**Note**: This tool generates security rules based on best practices and OWASP guidelines. Always review and customise the generated rules for your specific use case and security requirements.
