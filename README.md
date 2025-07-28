@@ -47,7 +47,7 @@ A modern web application that generates secure prompt rules for AI coding tools 
 - Kotlin
 - General (for any language)
 
-[!NOTE]
+> [!NOTE]
 > [!CAUTION]
 Available rules are based on Project type and language combinations. 
 
