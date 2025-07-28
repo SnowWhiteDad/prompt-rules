@@ -49,6 +49,9 @@ A modern web application that generates secure prompt rules for AI coding tools 
 - Kotlin
 - General (for any language)
 
+> [!NOTE]
+Available rules are based on Project type and language combinations. 
+
 ## 🛡️ OWASP LLM Top 10 Threats Covered
 
 1. **LLM-01: Prompt Injection** - Critical
