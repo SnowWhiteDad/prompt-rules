@@ -1,6 +1,6 @@
 # Vibe Coder - Prompt Rules Generator
 
-A modern web application that generates secure prompt rules for AI coding tools based on OWASP LLM Top 10 threats and [Wiz Secure Rules Files](https://github.com/wiz-sec-public/secure-rules-files). This tool helps developers create comprehensive security configurations for their AI-powered development environments.
+A modern web application that generates secure prompt rules for AI coding tools based on OWASP LLM Top 10 threats and [Wiz Secure Rules Files](https://github.com/wiz-sec-public/secure-rules-files). This tool helps developers create comprehensive security configurations for their AI-powered coding environments. The tool is live at [https://snowwhitedad.github.io/prompt-rules/](https://snowwhitedad.github.io/prompt-rules/).
 
 ## 🚀 Features
 
@@ -28,6 +28,7 @@ A modern web application that generates secure prompt rules for AI coding tools 
 - **Paranoid**: Maximum security with manual review requirements
 
 ### Project Types
+
 - Web Applications
 - Mobile Applications
 - API/Backend Services
@@ -36,6 +37,7 @@ A modern web application that generates secure prompt rules for AI coding tools 
 - General Purpose
 
 ### Language Support
+
 - JavaScript/TypeScript (React, Node.js)
 - Python (Flask, Django)
 - Java (Spring)
@@ -50,7 +52,7 @@ A modern web application that generates secure prompt rules for AI coding tools 
 - General (for any language)
 
 > [!NOTE]
-Available rules are based on Project type and language combinations. 
+Available rules are based on Selected tool, Project type and language combinations. Rules are not guaranteed to cover all possible scenarios or vulnerabilities.
 
 ## 🛡️ OWASP LLM Top 10 Threats Covered
 
