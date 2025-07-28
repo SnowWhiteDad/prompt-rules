@@ -8,23 +8,16 @@ WORKDIR /usr/share/nginx/html
 COPY index.html .
 COPY styles.css .
 COPY script.js .
-COPY README.md .
 
 # Copy nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Create a non-root user for security
+# Create a non-root user for security (optional)
 RUN addgroup -g 1001 -S nodejs && \
     adduser -S nextjs -u 1001
 
 # Change ownership of the app directory
-RUN chown -R nextjs:nodejs /usr/share/nginx/html && \
-    chown -R nextjs:nodejs /var/cache/nginx && \
-    chown -R nextjs:nodejs /var/log/nginx && \
-    chown -R nextjs:nodejs /etc/nginx/conf.d
-
-# Switch to non-root user
-USER nextjs
+RUN chown -R nextjs:nodejs /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
