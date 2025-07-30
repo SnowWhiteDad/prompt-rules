@@ -5,6 +5,7 @@ This guide covers various deployment options for the Vibe Coder Rules Generator 
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 14+ and npm
 - Docker and Docker Compose (for containerized deployment)
 - Git
@@ -12,42 +13,49 @@ This guide covers various deployment options for the Vibe Coder Rules Generator 
 ### Local Development
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/SnowWhiteDad/prompt-rules.git
    cd prompt-rules
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    ```
 
 3. **Start development server:**
+
    ```bash
    npm run dev
    ```
 
 4. **Access the application:**
-   Open http://localhost:3000 in your browser
+   Open <http://localhost:3000> in your browser
 
 ## 🐳 Docker Deployment
 
 ### Using Docker Compose (Recommended)
 
 1. **Build and start the application:**
+
    ```bash
    docker-compose up -d
    ```
 
 2. **Access the application:**
-   Open http://localhost:3000 in your browser
+
+   Open <http://localhost:3000> in your browser
 
 3. **View logs:**
+
    ```bash
    docker-compose logs -f
    ```
 
 4. **Stop the application:**
+
    ```bash
    docker-compose down
    ```
@@ -55,19 +63,23 @@ This guide covers various deployment options for the Vibe Coder Rules Generator 
 ### Using Docker directly
 
 1. **Build the image:**
+
    ```bash
    docker build -t vibe-coder-rules-generator .
    ```
 
 2. **Run the container:**
+
    ```bash
    docker run -d -p 3000:80 --name vibe-coder-app vibe-coder-rules-generator
    ```
 
 3. **Access the application:**
-   Open http://localhost:3000 in your browser
+
+   Open <http://localhost:3000> in your browser
 
 4. **Stop and remove the container:**
+
    ```bash
    docker stop vibe-coder-app
    docker rm vibe-coder-app
@@ -80,7 +92,8 @@ This guide covers various deployment options for the Vibe Coder Rules Generator 
 The application is automatically deployed to GitHub Pages via GitHub Actions when you push to the main branch.
 
 **Access the live application:**
-https://snowwhitedad.github.io/prompt-rules/
+
+<https://snowwhitedad.github.io/prompt-rules/>
 
 ### Netlify
 
@@ -93,11 +106,13 @@ https://snowwhitedad.github.io/prompt-rules/
 ### Vercel
 
 1. **Install Vercel CLI:**
+
    ```bash
    npm i -g vercel
    ```
 
 2. **Deploy:**
+
    ```bash
    vercel
    ```
@@ -105,11 +120,13 @@ https://snowwhitedad.github.io/prompt-rules/
 ### AWS S3 + CloudFront
 
 1. **Build the application:**
+
    ```bash
    npm run build
    ```
 
 2. **Upload to S3:**
+
    ```bash
    aws s3 sync . s3://your-bucket-name --exclude "node_modules/*" --exclude ".git/*"
    ```
@@ -119,6 +136,7 @@ https://snowwhitedad.github.io/prompt-rules/
 ### Google Cloud Platform
 
 1. **Deploy to Cloud Run:**
+
    ```bash
    gcloud run deploy vibe-coder-app \
      --source . \
@@ -144,6 +162,7 @@ PORT=3000
 ### Nginx Configuration
 
 The application includes a production-ready nginx configuration with:
+
 - Security headers
 - Gzip compression
 - Static file caching
@@ -155,6 +174,7 @@ The application includes a production-ready nginx configuration with:
 ### Health Checks
 
 The application includes a health check endpoint:
+
 - URL: `/health`
 - Method: GET
 - Response: `healthy` (text/plain)
@@ -162,6 +182,7 @@ The application includes a health check endpoint:
 ### Logs
 
 When using Docker, logs are available via:
+
 ```bash
 # View logs
 docker-compose logs -f
@@ -173,6 +194,7 @@ docker-compose logs -f vibe-coder-app
 ### Metrics
 
 The application exposes basic metrics:
+
 - Request count
 - Response times
 - Error rates
@@ -182,6 +204,7 @@ The application exposes basic metrics:
 ### Security Headers
 
 The application includes the following security headers:
+
 - X-Frame-Options: SAMEORIGIN
 - X-XSS-Protection: 1; mode=block
 - X-Content-Type-Options: nosniff
@@ -192,6 +215,7 @@ The application includes the following security headers:
 ### HTTPS
 
 For production deployments, always use HTTPS:
+
 - Configure SSL certificates
 - Redirect HTTP to HTTPS
 - Use secure cookies
@@ -201,6 +225,7 @@ For production deployments, always use HTTPS:
 ### Common Issues
 
 1. **Port already in use:**
+
    ```bash
    # Find process using port 3000
    lsof -i :3000
@@ -210,6 +235,7 @@ For production deployments, always use HTTPS:
    ```
 
 2. **Docker build fails:**
+
    ```bash
    # Clean Docker cache
    docker system prune -a
@@ -219,6 +245,7 @@ For production deployments, always use HTTPS:
    ```
 
 3. **Application not accessible:**
+
    ```bash
    # Check if container is running
    docker ps
@@ -246,6 +273,7 @@ For high-traffic deployments:
    - Enable SSL termination
 
 2. **Multiple Instances:**
+
    ```bash
    # Scale with Docker Compose
    docker-compose up -d --scale vibe-coder-app=3
@@ -261,11 +289,13 @@ For high-traffic deployments:
 ### Updating the Application
 
 1. **Pull latest changes:**
+
    ```bash
    git pull origin main
    ```
 
 2. **Rebuild and restart:**
+
    ```bash
    docker-compose down
    docker-compose up -d --build
@@ -280,10 +310,11 @@ For high-traffic deployments:
 ## 📞 Support
 
 For issues and questions:
+
 - Create an issue on GitHub
 - Check the troubleshooting section
 - Review the application logs
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

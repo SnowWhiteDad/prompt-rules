@@ -290,7 +290,6 @@ Contributions are welcome! Please feel free to submit issues, feature requests, 
 
 This project is open source and available under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
 
-
 ## 🙏 Acknowledgments
 
 - **OWASP**: For the LLM Top 10 security framework
